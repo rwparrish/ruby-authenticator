@@ -19,7 +19,7 @@ end
 puts "Welcome to the AUTHENTICATOR"
 25.times { print "-" }
 puts 
-puts "This program will take input from the use and compare the password"
+puts "This program will take input from the user and compare the password."
 puts "If the password is correct, you will get back the user object"
 
 attempts = 1
@@ -35,5 +35,6 @@ while attempts < 4
   break if input == "n"
   attempts += 1
 end 
+puts "You failed hacking too many times!"
 
  
