@@ -29,6 +29,8 @@ while attempts < 4
   username = gets.chomp
   puts "Password: "
   password = gets.chomp
+  auth = auth_user(username, password, users)
+  puts auth
   puts "Press 'n' to quit or any other hey to continue: "
   input = gets.chomp.downcase.strip
   break if input == "n"
