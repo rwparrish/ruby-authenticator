@@ -7,6 +7,16 @@ users = [
   { username: "Zoë", password: "4" }
 ]
 
+def auth_user(username, password, users_list)
+  users_list.each do |user_record|
+    if user_record[:username] == username && user_record[:password] == password
+     return user_record
+    else 
+     return "Are you a lousy hacker?"
+    end
+   end 
+end
+
 puts "Welcome to the AUTHENTICATOR"
 25.times { print "-" }
 puts 
@@ -19,13 +29,6 @@ while attempts < 4
   username = gets.chomp
   puts "Password: "
   password = gets.chomp
-  users.each do |user|
-   if user[:username] == username && user[:password] == password
-    puts user
-   else 
-    puts "Are you a lousy hacker?"
-   end
-  end 
   puts "Press 'n' to quit or any other hey to continue: "
   input = gets.chomp.downcase.strip
   break if input == "n"
