@@ -11,10 +11,9 @@ def auth_user(username, password, users_list)
   users_list.each do |user_record|
     if user_record[:username] == username && user_record[:password] == password
      return user_record
-    else 
-     return "Are you a lousy hacker?"
     end
    end 
+    "Are you a lousy hacker?"
 end
 
 puts "Welcome to the AUTHENTICATOR"
